@@ -5,9 +5,9 @@
   "license": "MIT",
   "author": {
     "name": "Ondřej Chrastina",
-     "email": "chrastina.ondra@gmail.com", 
-     "url": "https://github.com/Simply007"
-    },
+    "email": "chrastina.ondra@gmail.com",
+    "url": "https://github.com/Simply007"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

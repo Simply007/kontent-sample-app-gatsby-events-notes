@@ -1,5 +1,8 @@
 # Kontent Gatsby events notes
 
+[![Preview](https://img.shields.io/badge/-Preview-brightgreen.svg)](https://events-notes.netlify.com/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2394d81e-6ad8-4bbb-b290-8fd1e0d8148b/deploy-status)](https://app.netlify.com/sites/events-notes/deploys)
+
 This site is used to load notes from the conferences and meetups notes and display them in some readable form.
 
 ## 🚀 Quick start
@@ -69,7 +72,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Simply007/kontent-sample-app-gatsby-events-notes)
