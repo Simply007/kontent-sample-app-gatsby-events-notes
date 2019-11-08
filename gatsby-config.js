@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    `gatsby-theme-material-ui`,
     {
       resolve: `@kentico/gatsby-source-kontent`,
       options: {
