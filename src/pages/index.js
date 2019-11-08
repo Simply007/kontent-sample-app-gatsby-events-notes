@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Container, Box, Typography } from "@material-ui/core";
+import { Container, Box, Typography, Link } from "@material-ui/core";
 
 import Event from '../components/event';
 
@@ -9,6 +9,9 @@ const HomePage = ({ data }) => {
   const {
     allKontentItemConference: {
       nodes: conferences
+    },
+    allSitePage: {
+      nodes: pagesData
     }
   } = data;
 
@@ -36,23 +39,37 @@ const HomePage = ({ data }) => {
     );
   });
 
+  const pages = pagesData.map(pageData => 
+    <li key={pageData.id}><Link href={pageData.path}>{pageData.path}</Link></li>
+  );
+
   return (
     <Container maxWidth="sm">
       <Box my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
           Conferences & Meetups
-      </Typography>
+        </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
           Conferences
-      </Typography>
+        </Typography>
         {conferencesComponents}
       </Box>
+      <Typography variant="h5" component="h2" gutterBottom>
+        All Pages
+      </Typography>
+      {pages}
     </Container>
   )
 };
 
 export const query = graphql`
 {
+  allSitePage {
+    nodes {
+      id
+      path
+    }
+  }
   allKontentItemConference {
     nodes {
       system {
