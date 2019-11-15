@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import { Container, Box, Typography, Link } from "@material-ui/core";
 
 
-import Thumbnail from "../components/Thumbnail";
+import Thumbnail from "components/Thumbnail";
 
 const HomePage = ({ data }) => {
 

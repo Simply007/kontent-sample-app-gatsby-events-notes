@@ -4,8 +4,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
-import RichTextElement from '../components/RichTextElement';
-import { resolveContentItem } from '../utils/content-item-resolution';
+import RichTextElement from 'components/RichTextElement';
+import { resolveContentItem } from 'utils/content-item-resolution';
 
 
 const Presentation = ({ data }) => {
