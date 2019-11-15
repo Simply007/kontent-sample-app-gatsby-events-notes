@@ -35,7 +35,9 @@ const Presentation = ({ data }) => {
             {presentationName}
           </Typography>
           <Box>
-            <Typography component="p" dangerouslySetInnerHTML={{ __html: presentationDescription }} />
+            <Typography component="div" >
+              <div dangerouslySetInnerHTML={{ __html: presentationDescription }} />
+            </Typography>
           </Box>
         </Box>
         <Box>
