@@ -26,14 +26,19 @@ const HomePage = ({ data }) => {
         url: { value: conferenceUrl },
         description: { value: conferenceDescription },
         logo: {
-          url: conferenceLogoUrl,
-          name: conferenceLogoName
+          value: conferenceLogo
         }
       },
       fields: {
         slug: conferenceSlug
       }
     } = conference;
+
+    const {
+      url: conferenceLogoUrl,
+      name: conferenceLogoName
+    } = conferenceLogo[0];
+    
     return (
       <Thumbnail
         title={conferenceName}
@@ -45,8 +50,8 @@ const HomePage = ({ data }) => {
         name={conferenceName}
         actions={[
           {
-            title: "Official info",
-            url: conferenceUrl 
+            title: "Official URL",
+            url: conferenceUrl
           }
         ]}
       />

@@ -20,6 +20,7 @@ const Thumbnail = ({ title, summary, imageUri, imageTitle, url, actions }) => {
     <Card style={{ margin: '1em' }}>
       <CardActionArea onClick={() => navigate(url)}>
         <CardMedia
+          component="img"
           image={imageUri}
           title={imageTitle}
         />

@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/Menu';
 import Divider from '@material-ui/core/Divider';
-// import { navigate } from "gatsby";
+import { navigate } from "gatsby";
 
 const TopLayout = ({ children, theme }) => {
   const [open, setOpen] = useState(false);
@@ -26,10 +26,16 @@ const TopLayout = ({ children, theme }) => {
       <AppBar position="static">
         <Divider />
         <Toolbar>
-          <IconButton edge="start" aria-label="menu">
-            <MenuIcon onClick={handleToggle} />
+          <IconButton edge="start" aria-label="menu" onClick={handleToggle}>
+            <MenuIcon />
           </IconButton>
-          <Typography variant="h6" onClick={() => selectMenuItem('/')} style={{cursor: "pointer"}}>
+          <Typography
+            variant="h6"
+            onClick={() => {
+              setOpen(false);
+              navigate('/');
+            }}
+            style={{ cursor: "pointer" }}>
             Conferences & Meetups
           </Typography>
         </Toolbar>
