@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import Thumbnail from "components/Thumbnail";
+import Thumbnail from "../components/Thumbnail";
 import Box from '@material-ui/core/Box';
 
 

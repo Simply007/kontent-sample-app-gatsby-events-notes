@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Hint from 'components/hint';
+import Hint from '../components/hint';
 
 const resolveContentItem = (linkedItem) => {
   switch (linkedItem.system.type) {
