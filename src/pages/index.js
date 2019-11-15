@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Container, Box, Typography, Link } from "@material-ui/core";
 
-import Event from '../components/event';
+import Conference from '../components/conference';
 
 const HomePage = ({ data }) => {
 
@@ -30,7 +30,7 @@ const HomePage = ({ data }) => {
       }
     } = conference;
     return (
-      <Event
+      <Conference
         key={conferenceId}
         name={conferenceName}
         url={conferenceUrl}

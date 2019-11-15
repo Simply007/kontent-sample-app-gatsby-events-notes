@@ -2,7 +2,7 @@ import React from "react";
 import { Typography } from "@material-ui/core";
 
 
-const Event = (props) => {
+const Conference = (props) => {
   console.log(props.items);
   const items = (props.items || []).map((eventItem, index) => {
     return (
@@ -25,4 +25,4 @@ const Event = (props) => {
   );
 };
 
-export default Event
+export default Conference
