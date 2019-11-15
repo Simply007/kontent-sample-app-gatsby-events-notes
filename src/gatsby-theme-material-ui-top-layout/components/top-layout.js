@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/Menu';
 import Divider from '@material-ui/core/Divider';
-import { navigate } from "gatsby";
+// import { navigate } from "gatsby";
 
 const TopLayout = ({ children, theme }) => {
   const [open, setOpen] = useState(false);

@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Container, Box, Typography, Link } from "@material-ui/core";
 
-import Conference from '../components/conference';
+import Thumbnail from "../components/thumbnail";
 
 const HomePage = ({ data }) => {
 
@@ -24,22 +24,36 @@ const HomePage = ({ data }) => {
       elements: {
         name: { value: conferenceName },
         url: { value: conferenceUrl },
-        events: {
-          linked_items: conferenceItems
+        description: { value: conferenceDescription },
+        logo: {
+          url: conferenceLogoUrl,
+          name: conferenceLogoName
         }
+      },
+      fields: {
+        slug: conferenceSlug
       }
     } = conference;
     return (
-      <Conference
+      <Thumbnail
+        title={conferenceName}
+        summary={conferenceDescription}
+        imageUri={conferenceLogoUrl}
+        imageTitle={conferenceLogoName}
+        url={`/conferences/${conferenceSlug}`}
         key={conferenceId}
         name={conferenceName}
-        url={conferenceUrl}
-        items={conferenceItems}
+        actions={[
+          {
+            title: "Official info",
+            url: conferenceUrl 
+          }
+        ]}
       />
     );
   });
 
-  const pages = pagesData.map(pageData => 
+  const pages = pagesData.map(pageData =>
     <li key={pageData.id}><Link href={pageData.path}>{pageData.path}</Link></li>
   );
 
@@ -70,7 +84,7 @@ export const query = graphql`
       path
     }
   }
-  allKontentItemConference {
+  allKontentItemConference(limit: 3) {
     nodes {
       system {
         id
@@ -88,33 +102,18 @@ export const query = graphql`
         logo {
           value {
             url
-            width
-            height
+            name
           }
+        }
+        description {
+          value
         }
         location {
           value
         }
-        events {
-          linked_items {
-            ... on Node {
-              ... on KontentItemPresentation {
-                elements {
-                  event_info__name {
-                    value
-                  }
-                }
-              }
-              ... on KontentItemWorkshop {
-                elements {
-                  event_info__name {
-                    value
-                  }
-                }
-              }
-            }
-          }
-        }
+      }
+      fields {
+        slug
       }
     }
   }
