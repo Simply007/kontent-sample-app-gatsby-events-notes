@@ -36,7 +36,8 @@ const Thumbnail = ({ title, summary, imageUri, imageTitle, url, actions }) => {
               <Typography gutterBottom variant="h5" component="h2">
                 {title}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p" dangerouslySetInnerHTML={{ __html: summary }}>
+              <Typography variant="body2" color="textSecondary" component="div">
+                <div dangerouslySetInnerHTML={{ __html: summary }} />
               </Typography>
             </CardContent>
           </CardActionArea>

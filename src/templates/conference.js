@@ -65,7 +65,9 @@ const Conference = ({ data }) => {
             {conferenceName}
           </Typography>
           <Box>
-            <Typography component="p" dangerouslySetInnerHTML={{ __html: conferenceDescription }} />
+            <Typography component="div"  >
+              <div dangerouslySetInnerHTML={{ __html: conferenceDescription }} />
+            </Typography>
           </Box>
         </Box>
         <Box>
